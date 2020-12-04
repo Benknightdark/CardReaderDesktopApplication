@@ -2,10 +2,8 @@
 using PCSC;
 using PCSC.Iso7816;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace WindowsFormsApp.Controllers
 {
@@ -75,7 +73,6 @@ namespace WindowsFormsApp.Controllers
                             var holderSex = GetGender(data[49..50]);
                             var cardIssueDate = GetIssueDate(data[50..57]);
 
-         
                             var CardData = new
                             {
                                 cardNumber = cardNumber,
@@ -86,8 +83,6 @@ namespace WindowsFormsApp.Controllers
                                 cardIssueDate = cardIssueDate
                             };
                             return Ok(CardData);
-
-
                         }
                     }
                 }
@@ -95,11 +90,11 @@ namespace WindowsFormsApp.Controllers
             catch (Exception ex)
             {
                 return BadRequest(ex.Message);
-
-
             }
             return Ok("fukc");
         }
+
+        #region Custom Function
         private static string GetIssueDate(byte[] input)
         {
             var asciiEncoding = Encoding.ASCII;
@@ -151,6 +146,6 @@ namespace WindowsFormsApp.Controllers
 
             return holderName;
         }
+        #endregion Custom Function
     }
-
 }
