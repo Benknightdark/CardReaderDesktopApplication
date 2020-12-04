@@ -30,6 +30,7 @@ namespace WindowsFormsApp
     Host.CreateDefaultBuilder()
         .ConfigureWebHostDefaults(webBuilder =>
         {
+            webBuilder.UseUrls("http://localhost:59487");
             webBuilder.UseStartup<Startup>();
         });
     }
