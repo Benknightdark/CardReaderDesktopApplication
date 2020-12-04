@@ -9,6 +9,8 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Owin" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.664.37" />
+
   </ItemGroup>
 
 </Project>

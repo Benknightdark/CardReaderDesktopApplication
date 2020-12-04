@@ -16,15 +16,21 @@ namespace WindowsFormsApp
         public Form1()
         {
             InitializeComponent();
-            Task.Run(() =>
-            {
-                Program.CreateHostBuilder().Build().Run();
-            });
+
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            //this.TopMost = true;
+            //this.FormBorderStyle = FormBorderStyle.None;
+            //this.WindowState = FormWindowState.Maximized;
+        //    Task.Run(() =>
+        //    {
+        //        Program.CreateHostBuilder().Build().Run();
+        //    });
         }
+
+   
     }
 }
