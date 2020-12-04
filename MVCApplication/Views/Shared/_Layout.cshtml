@@ -6,6 +6,9 @@
     <title>@ViewData["Title"] - MVCApplication</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+            crossorigin="anonymous"></script>
     <script>
         var isNS = (navigator.appName == "Netscape") ? 1 : 0;
         if (navigator.appName == "Netscape") document.captureEvents(Event.MOUSEDOWN || Event.MOUSEUP);
@@ -20,7 +23,18 @@
         document.oncontextmenu = mischandler;
         document.onmousedown = mousehandler;
         document.onmouseup = mousehandler;
-        
+        $(document).keydown(function (event) {
+            if (event.keyCode == 123) {
+                return false;
+            }
+            else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) {
+                return false;
+            }
+        });
+
+        $(document).on("contextmenu", function (e) {
+            e.preventDefault();
+        });
     </script>
 </head>
 <body>
