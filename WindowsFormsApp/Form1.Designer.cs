@@ -35,10 +35,10 @@ namespace WindowsFormsApp
             // webView2
             // 
             this.webView2.CreationProperties = null;
-            this.webView2.Location = new System.Drawing.Point(0, 73);
+            this.webView2.Location = new System.Drawing.Point(0, -2);
             this.webView2.Name = "webView2";
-            this.webView2.Size = new System.Drawing.Size(801, 380);
-            this.webView2.Source = new System.Uri("https://www.microsoft.com", System.UriKind.Absolute);
+            this.webView2.Size = new System.Drawing.Size(801, 455);
+            //this.webView2.Source = new System.Uri("https://www.microsoft.com", System.UriKind.Absolute);
             this.webView2.TabIndex = 0;
             this.webView2.Text = "webView2";
             this.webView2.UseWaitCursor = true;
