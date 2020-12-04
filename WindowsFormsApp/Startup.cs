@@ -17,18 +17,24 @@ namespace WindowsFormsApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
             services.AddCors(options =>
             {
                 options.AddPolicy(name: "MyPolicy",
                     builder =>
                     {
                         builder.WithOrigins(
-                            "http://localhost:4000", 
-                            "https://localhost:4001")
-                                .WithMethods("GET");
+                              "http://localhost:4000",
+                              "https://localhost:4001",
+                              "https://5f5460623372.ngrok.io",
+                              "http://5f5460623372.ngrok.io"
+                              )
+                        .WithMethods("GET");
+
+
                     });
             });
+            services.AddControllers();
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +55,7 @@ namespace WindowsFormsApp
 
             app.UseRouting();
             app.UseCors("MyPolicy");
-            //app.UseAuthorization();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
