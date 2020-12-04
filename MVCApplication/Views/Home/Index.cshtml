@@ -5,4 +5,25 @@
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<button type="button" class="btn btn-danger" id="fuckBtn">fuck</button>
 </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+        crossorigin="anonymous"></script>
+<script>
+    (($) => {
+        $('#fuckBtn').click(async function () {
+            try {
+                const req = await fetch('http://localhost:59487/api/values')
+                const res = await req.json()
+                alert(res)
+            } catch (e) {
+                alert(e)
+            }
+        })
+        document.addEventListener('contextmenu', e => {
+            e.preventDefault();
+        });
+     
+    })($)
+</script>
