@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Extensions.Hosting;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,7 +16,15 @@ namespace WindowsFormsApp
         public Form1()
         {
             InitializeComponent();
+            Task.Run(() =>
+            {
+                Program.CreateHostBuilder().Build().Run();
+            });
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
