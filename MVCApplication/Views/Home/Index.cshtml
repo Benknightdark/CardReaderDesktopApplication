@@ -12,7 +12,7 @@
     (($) => {
         $('#fuckBtn').click(async function () {
             try {
-                const req = await fetch('http://localhost:59487/api/values')
+                const req = await fetch('http://localhost:59487/api/cardreader')
                 const res = await req.json()
                 alert(res)
             } catch (e) {

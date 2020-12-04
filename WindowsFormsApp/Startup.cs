@@ -2,12 +2,6 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WindowsFormsApp
 {
@@ -24,6 +18,17 @@ namespace WindowsFormsApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: "MyPolicy",
+                    builder =>
+                    {
+                        builder.WithOrigins(
+                            "http://localhost:4000", 
+                            "https://localhost:4001")
+                                .WithMethods("GET");
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,7 +48,7 @@ namespace WindowsFormsApp
             app.UseStaticFiles();
 
             app.UseRouting();
-
+            app.UseCors("MyPolicy");
             //app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
