@@ -21,11 +21,12 @@
 #See https://aka.ms/containerfastmode to understand how Visual Studio uses this Dockerfile to build your images for faster debugging.
 FROM mcr.microsoft.com/dotnet/sdk:5.0-buster-slim AS publish
 WORKDIR /app
-RUN dotnet publish  -c Release -o /app/publish
+COPY . .
+RUN dotnet publish  -c Release -o Publish
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0-buster-slim AS deploy
 WORKDIR /app
-COPY --from=publish /app/publish .
+COPY --from=publish /app/Publish .
 EXPOSE 80
 EXPOSE 443
 ENTRYPOINT ["dotnet", "MVCApplication.dll"]

@@ -14,7 +14,7 @@
             try {
                 const req = await fetch('http://localhost:59487/api/cardreader')
                 const res = await req.json()
-                alert(res)
+                alert(JSON.stringify(res))
             } catch (e) {
                 alert(e)
             }
