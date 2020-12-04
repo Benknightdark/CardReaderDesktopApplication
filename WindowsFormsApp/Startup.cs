@@ -25,16 +25,12 @@ namespace WindowsFormsApp
                         builder.WithOrigins(
                               "http://localhost:4000",
                               "https://localhost:4001",
-                              "https://5f5460623372.ngrok.io",
-                              "http://5f5460623372.ngrok.io"
+                              "https://cryptic-dusk-08315.herokuapp.com"
                               )
                         .WithMethods("GET");
-
-
                     });
             });
             services.AddControllers();
-
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

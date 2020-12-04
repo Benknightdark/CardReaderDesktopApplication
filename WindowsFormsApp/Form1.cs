@@ -31,7 +31,7 @@ namespace WindowsFormsApp
             this.WindowState = FormWindowState.Maximized;
             //https://5f5460623372.ngrok.io/
             //http://localhost:4000
-            this.webView2.Source = new System.Uri("https://5f5460623372.ngrok.io/", System.UriKind.Absolute);
+            this.webView2.Source = new System.Uri("https://cryptic-dusk-08315.herokuapp.com", System.UriKind.Absolute);
             this.webView2.Height = this.Height-20;
             this.webView2.Width = this.Width-20;
 

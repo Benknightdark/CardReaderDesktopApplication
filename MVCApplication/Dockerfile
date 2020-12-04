@@ -29,4 +29,5 @@ WORKDIR /app
 COPY --from=publish /app/Publish .
 EXPOSE 80
 EXPOSE 443
-ENTRYPOINT ["dotnet", "MVCApplication.dll"]
+#ENTRYPOINT ["dotnet", "MVCApplication.dll"]
+CMD ASPNETCORE_URLS=http://*:$PORT dotnet MVCApplication.dll
