@@ -79,7 +79,7 @@ namespace WindowsFormsApp.Controllers
                                 holderIdNum = holderIdNum,
                                 holderSex = holderSex,
                                 holderBirth = holderBirth,
-                                cardHolderName = cardHolderName,
+                                cardHolderName = cardHolderName.Replace("\u0000", String.Empty).Trim(),
                                 cardIssueDate = cardIssueDate
                             };
                             return Ok(CardData);
