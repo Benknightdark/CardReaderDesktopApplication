@@ -8,18 +8,3 @@
 <button type="button" class="btn btn-danger" id="fuckBtn">fuck</button>
 </div>
 
-<script>
-    (($) => {
-        $('#fuckBtn').click(async function () {
-            try {
-                const req = await fetch('http://localhost:59487/api/cardreader')
-                const res = await req.json()
-                alert(JSON.stringify(res))
-            } catch (e) {
-                alert(e)
-            }
-        })
-
-       
-    })($)
-</script>
