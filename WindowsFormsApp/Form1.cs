@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -28,6 +29,8 @@ namespace WindowsFormsApp
             {
                 Program.CreateHostBuilder().Build().Run();
             });
+            string DBname = ConfigurationManager.AppSettings["DB"];
+
             this.WindowState = FormWindowState.Maximized;
             //https://5f5460623372.ngrok.io/
             //http://localhost:4000

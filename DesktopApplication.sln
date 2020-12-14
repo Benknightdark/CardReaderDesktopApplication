@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30717.126
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp", "WindowsFormsApp\WindowsFormsApp.csproj", "{54E88306-32C6-452A-8957-DD00C877E014}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WindowsFormsApp", "WindowsFormsApp\WindowsFormsApp.csproj", "{54E88306-32C6-452A-8957-DD00C877E014}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MVCApplication", "MVCApplication\MVCApplication.csproj", "{AEA338F6-346C-4873-9E38-25D835034423}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCApplication", "MVCApplication\MVCApplication.csproj", "{AEA338F6-346C-4873-9E38-25D835034423}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "SetupProject", "SetupProject\SetupProject.vdproj", "{C97FF9B7-AE25-40C3-B9E5-69DB12D01AD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,8 @@ Global
 		{AEA338F6-346C-4873-9E38-25D835034423}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEA338F6-346C-4873-9E38-25D835034423}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEA338F6-346C-4873-9E38-25D835034423}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C97FF9B7-AE25-40C3-B9E5-69DB12D01AD8}.Debug|Any CPU.ActiveCfg = Debug
+		{C97FF9B7-AE25-40C3-B9E5-69DB12D01AD8}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
