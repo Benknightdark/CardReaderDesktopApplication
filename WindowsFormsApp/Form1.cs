@@ -29,8 +29,8 @@ namespace WindowsFormsApp
             {
                 Program.CreateHostBuilder().Build().Run();
             });
-            string DBname = ConfigurationManager.AppSettings["DB"];
-
+            string DBname = ConfigurationManager.AppSettings["TITLE"];
+            this.Text = DBname;
             this.WindowState = FormWindowState.Maximized;
             //https://5f5460623372.ngrok.io/
             //http://localhost:4000
