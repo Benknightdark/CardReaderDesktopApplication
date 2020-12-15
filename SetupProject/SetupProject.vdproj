@@ -96,6 +96,14 @@
         {
             "LaunchCondition"
             {
+                "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_022D385F0E504D33AF7FEB64C397A1BF"
+                {
+                "Name" = "8:.NET Framework"
+                "Message" = "8:[VSDNETMSG]"
+                "FrameworkVersion" = "8:.NETFramework,Version=v4.7.2"
+                "AllowLaterVersions" = "11:FALSE"
+                "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=863262"
+                }
                 "{A06ECF26-33A3-4562-8140-9B0E340D4F24}:_7A09C172A451482599ED5FF66355FCFF"
                 {
                 "Name" = "8:.NET Core"
@@ -167,13 +175,13 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:SetupProject"
         "ProductCode" = "8:{3C15A42D-F446-42E0-AB93-9E17C43DFE99}"
-        "PackageCode" = "8:{6CA973B5-BC47-41A0-A8F1-C162D1572271}"
+        "PackageCode" = "8:{2353E995-B45F-44C4-8B60-2AC7C6774F58}"
         "UpgradeCode" = "8:{FEF93F90-A27C-4614-ADA3-27723C341F22}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
-        "RemovePreviousVersions" = "11:FALSE"
+        "RemovePreviousVersions" = "11:TRUE"
         "DetectNewerInstalledVersion" = "11:TRUE"
-        "InstallAllUsers" = "11:FALSE"
+        "InstallAllUsers" = "11:TRUE"
         "ProductVersion" = "8:1.0.0"
         "Manufacturer" = "8:smartgame4@hotmail.com.tw"
         "ARPHELPTELEPHONE" = "8:"
