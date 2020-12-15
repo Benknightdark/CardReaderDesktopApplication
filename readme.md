@@ -9,3 +9,6 @@ heroku container:login
 heroku container:push -a cryptic-dusk-08315 web    
  heroku container:release -a cryptic-dusk-08315  web
 ```
+
+# 安裝InstallForge
+- https://installforge.net/
